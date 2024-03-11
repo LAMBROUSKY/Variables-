@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <title> ¿quieres ser mi novia ❤️?</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+<body class="container bg-primary text-white text-center py-5">
+    <h1 class="display-1 fw-bold">¿Quieres ser mi novia😍?</h1>
+    <div class="mt-5">
+        <button class="btn btn-light btn-lg" onclick="quiero()">si, Quiero ser 😁</button>
+        <button class="btn btn-danger ms-5 btn-lg" onmouseenter="noquiero(event)">no,no quiero ser 😒</button>
+    </div>
+
+
+    <script>
+        function Noquiero(evt) {
+            let objetivo = evt.target
+            let tamañoMax = window.innerWidth
+            let pesoMax = window.innerHeight
+
+            let randomtamaño = getRamdomInt(0, tamañoMax - objetivo.offsetwidth)
+            let randompeso = getRamdomInt(0, pesoMax - objetivo.offsetHeigth)
+
+            objetivo.style.position = "absolute"
+            objetivo.style.top = randompeso + "px"
+            objetivo.style.left = randomtamaño + "px"
+        }
+
+        function quiero() {
+            alert("Felicidades, te ganaste un Besotee 😘, ya eres mi novia 😜")
+            
+        }
+
+        function posiciones(min, max) {
+            return math.floor(math.objetivo() * (max - min +1)) + min
+            
+        }
+    </script>
+</body>
+</html>
