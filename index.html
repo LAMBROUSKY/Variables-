@@ -3,41 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device=width, initial-scale=1.0">
-    <title> ¿quieres ser mi novia ❤️?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novia 😍?</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body class="container bg-primary text-white text-center py-5">
-    <h1 class="display-1 fw-bold">¿Quieres ser mi novia😍?</h1>
+    <h1 class="display-1 fw-bold">¿Quieres ser mi novia 🥰?</h1>
     <div class="mt-5">
-        <button class="btn btn-light btn-lg" onclick="quiero()">si, Quiero ser 😁</button>
-        <button class="btn btn-danger ms-5 btn-lg" onmouseenter="noquiero(event)">no,no quiero ser 😒</button>
+        <button class="btn btn-success btn-lg" onclick="quiero()">Sí, Quiero 😏</button>
+        <button class="btn btn-danger ms-5 btn-lg" onmouseenter="noquiero(event)">No, no Quiero 😔</button>
     </div>
 
 
     <script>
-        function Noquiero(evt) {
-            let objetivo = evt.target
-            let tamañoMax = window.innerWidth
-            let pesoMax = window.innerHeight
+        function noquiero(evt){
+           let target = evt.target
+           let maxWidth = window.innerWidth
+           let maxHeight = window.innerHeight
 
-            let randomtamaño = getRamdomInt(0, tamañoMax - objetivo.offsetwidth)
-            let randompeso = getRamdomInt(0, pesoMax - objetivo.offsetHeigth)
+           let randomWidth = getRandomInt(0, maxWidth - target.offsetWidth)
+           let randomHeight = getRandomInt(0, maxHeight - target.offsetHeight)
 
-            objetivo.style.position = "absolute"
-            objetivo.style.top = randompeso + "px"
-            objetivo.style.left = randomtamaño + "px"
-        }
+           target.style.position = 'absolute'
+           target.style.top = randomHeight + 'px'
+           target.style.left = randomWidth + 'px'
+       }
 
-        function quiero() {
-            alert("Felicidades, te ganaste un Besotee 😘, ya eres mi novia 😜")
-            
-        }
+       function quiero(){
+           alert('!Felicitaciones¡ te has convertido en mi novia 🤗 ya tienes tu papucho 😆')
+       }           
+       
 
-        function posiciones(min, max) {
-            return math.floor(math.objetivo() * (max - min +1)) + min
-            
-        }
+       function getRandomInt(min, max) {
+           return Math.floor(Math.random() * (max - min + 1)) + min
+       }
     </script>
 </body>
 </html>
